@@ -22,14 +22,32 @@ hamburger. addEventListener('click', function(){
 function SendMail(event) {
     emailjs.init("z6bzcraJrh6Gieehq");
     event.preventDefault();  // Prevent default form submission
-    var parameters = {
-        Nama : document.getElementById('Nama').value,
-        Email : document.getElementById('Email').value,
-        pesan : document.getElementById('pesan').value
-    };
+    var nama = document.getElementById('Nama').value;
+    var email = document.getElementById('Email').value;
+    var pesan = document.getElementById('pesan').value;
 
-    emailjs.send("service_cpajmkc", "template_qlce284", parameters)
-    .then(function(response) {
-        sessionStorage.setItem("Success", "Terima Kasih Telah Mengirim Email");
+    if (!nama || !email || !pesan){
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Mohon isi semua bidang dalam formulir.',
+        });
     }
-)};
+    else{
+        
+        var parameters = {
+            Nama : nama,
+            Email : email,
+            pesan : pesan
+        };
+    
+        emailjs.send("service_cpajmkc", "template_qlce284", parameters)
+        .then(function(response) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Berhasil',
+                text: 'Email telah berhasil terkirim.',
+            });
+        }
+    )}
+};
