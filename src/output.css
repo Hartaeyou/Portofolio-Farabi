@@ -792,14 +792,6 @@ video {
   border-width: 1px;
 }
 
-.border-8 {
-  border-width: 8px;
-}
-
-.border-2 {
-  border-width: 2px;
-}
-
 .border-4 {
   border-width: 4px;
 }
@@ -1199,31 +1191,6 @@ body {
 
   .md\:w-11 {
     width: 2.75rem;
-  }
-
-  .md\:py-\[42px\] {
-    padding-top: 42px;
-    padding-bottom: 42px;
-  }
-
-  .md\:py-\[477px\] {
-    padding-top: 477px;
-    padding-bottom: 477px;
-  }
-
-  .md\:py-\[47px\] {
-    padding-top: 47px;
-    padding-bottom: 47px;
-  }
-
-  .md\:py-\[50px\] {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
-  .md\:py-\[55px\] {
-    padding-top: 55px;
-    padding-bottom: 55px;
   }
 
   .md\:py-\[54px\] {

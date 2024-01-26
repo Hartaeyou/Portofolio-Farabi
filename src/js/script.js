@@ -40,7 +40,15 @@ function SendMail(event) {
             Email : email,
             pesan : pesan
         };
-    
+        Swal.fire({
+            imageUrl: 'src/img/loadingg.gif',
+            imageHeight: 200,
+            imageWidth: 200,
+            title: 'Mohon Tunggu',
+            text: 'Pesan Anda Sedang dalam Proses',
+            showConfirmButton: false
+        });
+        
         emailjs.send("service_cpajmkc", "template_qlce284", parameters)
         .then(function(response) {
             Swal.fire({
