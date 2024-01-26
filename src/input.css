@@ -28,3 +28,7 @@ body {
     @apply  -rotate-45;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
