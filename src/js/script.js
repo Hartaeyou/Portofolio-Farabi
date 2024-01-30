@@ -46,7 +46,8 @@ function SendMail(event) {
             imageWidth: 200,
             title: 'Mohon Tunggu',
             text: 'Pesan Anda Sedang dalam Proses',
-            showConfirmButton: false
+            showConfirmButton: false,
+            allowOutsideClick: false
         });
         
         emailjs.send("service_cpajmkc", "template_qlce284", parameters)
